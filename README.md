@@ -1,6 +1,5 @@
-# Scrum 02
+# ALEXA SPELLING TEST
 
-CO2201 Semester 2 Group 02 Repository
 
 ## How to get up and running:
 1. Go to https://developer.amazon.com/alexa/console/ask and create an account
