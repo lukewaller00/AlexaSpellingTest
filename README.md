@@ -13,5 +13,5 @@ CO2201 Semester 2 Group 02 Repository
 8. To view DynamoDB Attributes open DynamoDB Database on the Code Tab
 
 ## Application Flow:
-![Image of Application Flowchart](https://campus.cs.le.ac.uk/gitlab/jbh13/scrum-02/-/raw/master/flowchart.png)
+![Image of Application Flowchart](https://github.com/lukewaller00/AlexaSpellingTest/blob/main/flowchart.png)
 
