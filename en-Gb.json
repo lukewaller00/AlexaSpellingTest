@@ -1,0 +1,460 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "spelling test",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AddSpellingIntent",
+                    "slots": [
+                        {
+                            "name": "words",
+                            "type": "AMAZON.CreativeWorkType",
+                            "samples": [
+                                "add {words}",
+                                "{words}"
+                            ],
+                            "multipleValues": {
+                                "enabled": true
+                            }
+                        }
+                    ],
+                    "samples": [
+                        "update my list",
+                        "add {words}",
+                        "update my spelling list",
+                        "create a new spelling list",
+                        "add {words} to my spelling list"
+                    ]
+                },
+                {
+                    "name": "BeginQuizIntent",
+                    "slots": [],
+                    "samples": [
+                        "start new test",
+                        "quiz",
+                        "begin test",
+                        "start my test",
+                        "Start Spelling Test",
+                        "Begin Spelling Test"
+                    ]
+                },
+                {
+                    "name": "GetUsernameIntent",
+                    "slots": [
+                        {
+                            "name": "userName",
+                            "type": "AMAZON.FirstName",
+                            "samples": [
+                                "My name is {userName}",
+                                "{userName}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "it's {userName}",
+                        "my name is {userName}"
+                    ]
+                },
+                {
+                    "name": "TellWordIntent",
+                    "slots": [],
+                    "samples": [
+                        "my next word please",
+                        "Tell me my next word please",
+                        "next word please",
+                        "next",
+                        "word",
+                        "read from my spellings",
+                        "tell me the word",
+                        "give me a spelling ",
+                        "spelling"
+                    ]
+                },
+                {
+                    "name": "BeginMarkingIntent",
+                    "slots": [],
+                    "samples": [
+                        "show answers",
+                        "show me the answers",
+                        "check answers",
+                        "begin checking"
+                    ]
+                },
+                {
+                    "name": "TellAnswerIntent",
+                    "slots": [],
+                    "samples": [
+                        "next one please",
+                        "another",
+                        "next spelling",
+                        "next spelling please",
+                        "next one"
+                    ]
+                },
+                {
+                    "name": "ClearSpellingListIntent",
+                    "slots": [],
+                    "samples": [
+                        "delete my words",
+                        "clear list",
+                        "clear my spelling list"
+                    ]
+                },
+                {
+                    "name": "ConfirmWordIntent",
+                    "slots": [
+                        {
+                            "name": "yesNo",
+                            "type": "yesNoType"
+                        }
+                    ],
+                    "samples": [
+                        "{yesNo}"
+                    ]
+                },
+                {
+                    "name": "ChildPractiseReportIntent",
+                    "slots": [],
+                    "samples": [
+                        "Tell me how my child did in her spelling practise",
+                        "Tell me how my child did in his spelling practise",
+                        "Tell me how my child did",
+                        "show me the report",
+                        "show me the performance report",
+                        "Show me my child's report"
+                    ]
+                },
+                {
+                    "name": "MostIncorrectWordIntent",
+                    "slots": [],
+                    "samples": [
+                        "tell me the word she got wrong the most",
+                        "tell me the word he got wrong the most",
+                        "most incorrect word",
+                        "Tell me the word my child got wrong the most"
+                    ]
+                },
+                {
+                    "name": "ChangeToLettersIntent",
+                    "slots": [],
+                    "samples": [
+                        "give answers in spellings",
+                        "give answers in letters",
+                        "change pronounciation to letters",
+                        "Change answers to letters"
+                    ]
+                },
+                {
+                    "name": "ChangeToPhoneticsIntent",
+                    "slots": [],
+                    "samples": [
+                        "change anwsers to phonetics",
+                        "give answers in phonetics",
+                        "Change spellings to phonetics"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "yesNoType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "no"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "yes"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "AddSpellingIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "words",
+                            "type": "AMAZON.CreativeWorkType",
+                            "confirmationRequired": true,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "confirmation": "Confirm.Slot.384954604177.1003118352103",
+                                "elicitation": "Elicit.Slot.384954604177.1003118352103"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "GetUsernameIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "userName",
+                            "type": "AMAZON.FirstName",
+                            "confirmationRequired": true,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "confirmation": "Confirm.Slot.1492755136419.1025983021890",
+                                "elicitation": "Elicit.Slot.1492755136419.1025983021890"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "ClearSpellingListIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": []
+                },
+                {
+                    "name": "TellAnswerIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": []
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.881563734522.871698398150",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Please tell me your first word?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "What is your first word?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Slot.881563734522.871698398150",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "is {wordOne} your word?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "{wordOne} , is that your word?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.881563734522.1394050867031",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "please tell me your second word?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "What is your second word?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Slot.881563734522.1394050867031",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "is {wordTwo} your word?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "{wordTwo} , is that your word?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.881563734522.1094902547734",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Please tell me your third word?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "What is your third word?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Slot.881563734522.1094902547734",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "confirm that {wordThree} is your word?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "{wordThree} , is this your word?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.881563734522.1438869459945",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Tell me your fourth word"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "What is your fourth word?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Slot.881563734522.1438869459945",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "{wordFour} is your word, correct?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.695866124396.1585131522226",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Ok. What words would you like to add?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Slot.695866124396.1585131522226",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Ok, I have added {words} . Is this correct?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Intent.881563734522",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": " {wordOne} , {wordTwo} , {wordThree} , {wordFour} , is your list of words, correct?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.384954604177.1003118352103",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Tell me the words you want to add."
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Ok what words would you like to add?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Slot.384954604177.1003118352103",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Are you sure you want to add {words} ?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Intent.567086447021",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "I will call you {userName}  from now on. Is that ok?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "{userName} . Did I get that right?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1492755136419.1025983021890",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What's your name?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Hi there. Please tell me your name to continue. "
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Slot.1492755136419.1025983021890",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "I will call you {userName}  from now on. Is that ok?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "{userName} . Did I get that right?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Intent.584129947732",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Are you sure you want to delete all the words in your spelling list?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1429219005604.1054052488077",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Was your spelling correct?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.972151146050.1259279674320",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Did you get that right?"
+                    }
+                ]
+            }
+        ]
+    }
+}
